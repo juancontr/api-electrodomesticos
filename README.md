@@ -4,8 +4,8 @@ API construida con **Node.js**, **Express** y **MySQL** para administrar una tie
 
 La base de datos está desplegada en **Clever Cloud** y la API en **Render**.
 
-- URL pública de la API: `https://TU-SERVICIO.onrender.com`
-- Repositorio: `https://github.com/TU-USUARIO/api-electrodomesticos`
+- URL pública de la API: `https://api-electrodomesticos.onrender.com`
+- Repositorio: `https://github.com/juancontr/api-electrodomesticos`
 
 ## Estructura del proyecto
 
@@ -35,7 +35,7 @@ Cada tabla tiene sus tres archivos: `productoModel.js`, `productoController.js` 
 ## Instalación y ejecución en local
 
 ```bash
-git clone https://github.com/TU-USUARIO/api-electrodomesticos.git
+git clone https://github.com/juancontr/api-electrodomesticos.git
 cd api-electrodomesticos
 npm install
 ```
