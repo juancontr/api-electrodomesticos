@@ -1,5 +1,4 @@
 const db = require('../config/dbConfig')
-// se llama a la configuracion de la bd
 
 
 class categoria{

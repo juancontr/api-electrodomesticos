@@ -1,8 +1,6 @@
 const clienteModel = require('../models/clienteModel')
-// se realiza llamado al modelo
 
 
-// Reglas de validacion de los datos que llegan en el body
 const reglas = [
     { campo: 'documento', tipo: 'texto', max: 15, requerido: true },
     { campo: 'nombres', tipo: 'texto', max: 60, requerido: true },
@@ -15,7 +13,6 @@ const reglas = [
 ];
 
 
-// Revisa los datos recibidos y devuelve la lista de errores encontrados
 function validar(datos){
     const errores = [];
 
@@ -75,7 +72,6 @@ function validar(datos){
 }
 
 
-// Toma solo los campos de la tabla y los deja limpios para guardarlos
 function obtenerDatos(body){
     const datos = {};
 
@@ -96,13 +92,11 @@ function obtenerDatos(body){
 }
 
 
-// El id de la URL debe ser un entero positivo
 function idValido(id){
     return /^\d+$/.test(id) && Number(id) > 0;
 }
 
 
-// Traduce los errores de MySQL a respuestas JSON con el codigo HTTP adecuado
 function manejarErrorBD(err, res){
     if(err.code === 'ER_DUP_ENTRY'){
         return res.status(409).json({error: 'Ya existe un registro con ese valor (restricción UNIQUE)', detalle: err.sqlMessage});
